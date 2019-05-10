@@ -14,9 +14,7 @@ let dinosaur1 = {
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
-  speak() {
-    console.log(`${this.roar}`);
-  }
+  roar: () => "RAWERSRARARWERSARARARRR!"
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -91,7 +89,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for (let i=0; i<graduates.length; i++) {
-  contactInfo.push(graduates[i], first_name + " " + graduates[i].email);
+  contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
 }
 console.log(contactInfo);
 
@@ -128,8 +126,8 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-let title = zooAnimals.forEach(function (i) {
-  animalNames.push(i.animal_name + " :" + scientific_name);
+let title = zooAnimals.forEach(function (newNames) {
+  animalNames.push(newNames.animal_name + " :" + newNames.scientific_name);
 });
 console.log(animalNames);
 
@@ -159,9 +157,9 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce((popTotal, sum) => {
-  return popTotal + sum.population;
-});
+const populationTotal = zooAnimals.reduce((acc, total) => {
+  return acc += total.population;
+}, 0);
 console.log(populationTotal);
 
 

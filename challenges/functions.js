@@ -25,9 +25,9 @@ function multiply(x,y,) {
   console.log(x * y);
 }
 function greeting(x,y) {
-  console.log(`Hello${x} ${y}, nice to meet you!`)
+  console.log(`Hello ${x} ${y}, nice to meet you!`)
 }
-consume("Mary", "Poppins", greeting);
+//consume("Mary", "Poppins", greeting);
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */

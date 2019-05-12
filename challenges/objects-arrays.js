@@ -153,7 +153,7 @@ const largerPopulation = zooAnimals.filter((pop) => {
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
-
+  
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
